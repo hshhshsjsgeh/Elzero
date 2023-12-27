@@ -1,0 +1,155 @@
+<!--
+    _attr_='_value_'
+    _attr_="_value_"
+    _attr_=_value_                                  ===> if _str_ is one word
+
+    [1] - _globalAttr_: class, id, hidden, style, role, width, height, area-checked, tabindex, area-labeledby, data-text, contenteditable (to make content as input)
+    [2] - _localAttr
+
+
+    [1] - _inputType_
+        [1] - submit
+        [2] - reset
+        [3] - text                                  ===> _attr_: minlength
+        [4] - email
+        [5] - color
+        [6] - range                                 ===> _attr_: min, max, step
+        [7] - number                                ===> _attr_: min, max, step
+        [8] - radio                                 ===> _attr_: checked (must radio inputs have the same name)
+        [9] - checkbox                              ===> _attr_: checked (must radio inputs have the same name)
+        [10] - file
+        [11] - search
+        [12] - url
+        [13] - time
+        [14] - date
+        [15] - month
+-->
+<!DOCTYPE html> <!--doctype: to tell the browser the version of html (html ==> v5 standard mode), should write this sentence-->
+<html lang="_lang_">
+    <head>
+        <meta charset="utf-8"/> <!--meta: information about page-->
+        <meta name="desciption" content="This is our book store"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Book store</title> <!--title-->
+        <style media="_mediaConditionInCss_"></style> <!--style: css style-->
+        <link rel="stylesheet" href="" media="_mediaConditionInCss_"/> <!--link: link to specific file-->
+        <link rel="stylesheet" href="./css.css"/>
+        <script></script> <!--script: js style-->
+    </head>
+    <body>
+        This is my Book store, Welcome
+        <h1>heading</h1> <!--h_int_: (_int_ ==> 1 to 6) to write heading-->
+        <p>paragraph</p> <!--p: paragraph-->
+        <b>bold</b> <!--b: bold-->
+        <strong>bold</strong> <!--strong: bold-->
+        <em>emphasize</em> <!--em: emphasize-->
+        <i>italic</i> <!--i: italic-->
+        <mark>marked</mark> <!--mark: highlight-->
+        <u>underline</u> <!--u: underline-->
+        <small>smaller</small> <!--small: smaller-->
+        <del>deleted</del> <!--del: deleted-->
+        <ins>inserted</ins> <!--ins: inserted-->
+        <sub>subscript</sub> <!--sub: subscript-->
+        <sup>superscript</sup> <!--sup: superscipt-->
+
+        <a href="_url_" target="__type_" title="_title_">link</a> <!--a: url-->
+        <img src="_path_" alt="_alt_"/> <!--img: image-->
+
+        <ul> <!--ul: unnumbered (unordered) list-->
+            <li>list</li> <!--li: point in the list-->
+        </ul>
+        <ol reversed start="_int_" value="_int_" type="(1 | i | I | A | a)"> <!--ol: numbered (ordered) list-->
+            <li>list</li> <!--li: point in the list-->
+        </ol>
+        <dl> <!--dl: description list-->
+            <dt>term</dt> <!--dt: description term-->
+            <dd>description</dd> <!--dd: term description-->
+        </dl>
+        <table border="_int_" cellpadding="_measure_"> <!--table: table start-->
+            <caption>caption</caption> <!--caption: caption of the table-->
+            <thead> <!--thead: table head-->
+                <tr> <!--tr: table row-->
+                    <th colspan="_cellsInt_">head</th> <!--th: table head cell-->
+                </tr>
+            </thead>
+            <tbody> <!--tbody: table body-->
+                <tr> <!--tr: table row-->
+                    <td colspan="_cellsInt_">body</td> <!--td: table cell-->
+                </tr>
+            </tbody>
+            <tfoot> <!--tfoot: table foot-->
+                <tr> <!--tr: table row-->
+                    <td colspan="_cellsInt_">tail</td> <!--td: table cell-->
+                </tr>
+            </tfoot>
+        </table>
+
+        <div>div</div> <!--div: block-->
+        <span>span</span> <!--span: inline block-->
+        <br/> <!--br: break line-->
+        <hr/> <!--hr: horizontal rule-->
+
+        <header>header</header> <!--header-->
+        <nav>nav</nav> <!--navigation bar-->
+        <section> <!--section-->
+            <article>article</article> <!--article-->
+            <aside>side article</aside> <!--aside: side of section-->
+        </section>
+        <footer>footer</footer> <!--footer-->
+
+        <figure> <!--figure-->
+            <img src="_path_" alt="_alt_"/> <!--img: image-->
+            <figcaption>cation</figcaption> <!--figcaption: figure caption-->
+        </figure>
+        <audio controls autoplay loop muted> <!--audio-->
+            <source src="_path_" type="_audioType_"/> <!--source: to use more than one source-->
+            _text_ <!--: if audio not supported-->
+        </audio>
+        <video controls autoplay loop muted width="_int_" height="_int_" poster="_path_"> <!--video-->
+            <source src="_path_" type="videoType"/> <!--source: to use more than one source-->
+            _text_ <!--: if video not supported-->
+            <track src="_path_" kind="subtitles" srclang="_lang_" label="_label_"/> <!--track: to perview translation-->
+        </video>
+
+        <form action="_path_" method="_methodType_" target="__type_" novalidate>
+            <input type="_inputType_" name="_name_" id="_idInput_" placeholder="_placeholder_" value="_value_" required hidden readonly disabled autofocus/>
+
+            <input list="_list_" name="_name_" id="_idInput_"/>
+            <datalist>
+                <option value="_value_" selected>_text_</option>
+            </datalist>
+             
+            <select name="_name_" id="_idInput_" multiple>
+                <optgroup label="_label_">
+                    <option value="_value_" selected>_text_</option>
+                </optgroup>
+            </select>
+            <textarea name="_name_" id="_idInput_" cols="_int_" rows="_int_" placeholder="_placeholder_"></textarea>
+            <label for="_idInput_">_text_</label>
+        </form>
+
+        <q>
+            _text_
+        </q>
+        <blockquote>
+            _text_
+        </blockquote>
+        <button>
+            _text_
+        </button>
+        <wbr/> <!--wbr: word break-->
+        <bdi>
+            _text_
+        </bdi>
+
+        <code>
+            _code_
+        </code>
+        <pre> <!--pre: with spaces and new lines-->
+            _code_
+        </pre>
+        <iframe src="_path_" frameborder="_int_" width="_int_" height="_int_"></iframe>
+
+        <script src="./js.js"></script>
+    </body>
+</html>

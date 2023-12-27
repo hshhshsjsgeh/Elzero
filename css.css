@@ -1,0 +1,253 @@
+/*
+_COLOR_: rgb(_int_ _int_ _int_ / _intalpha_%), #hex, _color_
+_BORDERTYPE_: solid, dashed
+_measure_: em (number of times from default in parent), rem (number of times from default in html tag), vw (percent from size of page), calc()
+_TRANS_: scaleX(_intTimes_), scaleY(_intTimes_), rotate(_measureDegree_), translate(_measureX_, _measureY_), skewX(_measureDegree_), skewY(_measureDegree_), skew(_measureDegreeX_, _measureDegreeY_), translateX(_measure_), translateY(_measure_), translate(_measureX_, _measureY)< matrix(_scaleX_, _scaleY_, _skewX_, _skewY_, _translateX_, _translateY_)
+         rotateX, rotateY, rotateZ, rotate3d(_xBool_, _yBool_, _zBool_, _measreDegree_), translateX, translateY, translateZ, translate3d(_x_, _y_, _z_)
+_mediaCondition_ : print, (_property_: _value_) and ...
+_GLOBALVALUE_: inherit, initial, unset, revert
+
+:root {
+    --_var_: _value_
+}
+
+_selector_:_pseudoClass_:... ..., ... {
+    _property_: (_value_, _GLOBALVALUE_, var(--_var_, ...)) !important; 																																===> `inherit` is to transfare style from parent, `!impornant` to stop override, `var(...)` if the variable not found
+    all: _GLOBALVALUE_
+    --_var_: _value_                                                    																																===> local variable
+    ...
+}
+_selector_ _selector_                                                   																																===> to reach to nesting child
+_selector_ > _selector_                                                 																																===> direct child
+_selector_ + _selector_                                                 																																===> to reach next to child
+_selector_ ~ _selector_                                                 																																===> to reach next to childs
+_selector__selector_                                                    																																===> element that has these 2 selectors in one element
+_selector_, _selector_                                                  																																===> group
+_selector_[_attribute_]                                                 																																===> selector has custom attribute
+_selector_[_attribute_="_value_"]                                       																																===> selector has custom attribute with custom value
+_selector_[_attribute_~="_valueWord_"]                                  																																===> selector has custom attribute with custom word (must word separated)
+_selector_[_attribute_~="_valueString_"]                                																																===> selector has custom attribute with custom string
+_selector_[_attribute_^="_valueString_"]                                																																===> selector has custom attribute start with custom string
+_selector_:first-child
+_selector_:last-child
+_selector_:first-of-type
+_selector_:last-of-type
+_selector_:only-child
+_selector_:not(_selector_)
+_selector_:nth-child(_selector_)
+_selector_:nth-child(even)
+_selector_:nth-child(odd)
+_selector_:last-child(_selector_)
+_selector_:last-child(even)
+_selector_:last-child(odd)
+_selector_:nth-of-type(_selector_)
+_selector_:nth-of-type(even)
+_selector_:nth-of-type(odd)
+_selector_:checked
+_selector_:empty
+_selector_:required
+_selector_::selection
+_selector_::placeholder
+
+_selector_:
+    [1] - _element_
+    [2] - ._class_
+    [3] - #_id_
+    [4] - *
+
+_property_:                                                                                                                                                                                             ===> to use new property `-webkit-, -moz-, -o-, -ms-_property_ (vendor prefix)
+    [1] - color: _COLOR_
+    [2] - font-size: _measure_, larger, smaller
+    [3] - background: _allOfBottom_
+            background-color: _COLOR_
+
+            background-image: url("_path_"), linear-gradiant(_measureAngle_, _COLOR_ _measureStop_, ...)
+            background-repeat: repeat, no-repeat, repeat-x, repeat-y
+            background-attachment: scroll, fixed
+            background-position: (left, top, center, right, bottom, _measure_) (top, left, center, right, bottom, _measure_)
+            background-position-x: left, top, center, right, bottom, _measure_
+            background-position-y: center, left, top, right, bottom, _measure_
+            background-size: auto, cover, contain, _measureWidth_ _measureHeight_
+    [4] - padding: auto, (_measureTop_ _measureRight_ _measureBottom_ _measureLeft_), (_measureX_ _measureRight_ _measureLeft_), (_measureX_ _measureY_), _measure_
+            padding-top: auto, _measure_
+            padding-right: auto, _measure_
+            padding-bottom: auto, _measure_
+            padding-left: auto, _measure_
+    [5] - margin: auto, (_measureTop_ _measureRight_ _measureBottom_ _measureLeft_), (_measureX_ _measureRight_ _measureLeft_), (_measureX_ _measureY_), _measure_
+            margin-top: auto, _measure_
+            margin-right: auto, _measure_
+            margin-bottom: auto, _measure_
+            margin-left: auto, _measure_
+    [6] - border: _allOfBottom_
+            border-width: auto, (_measureTop_ _measureRight_ _measureBottom_ _measureLeft_), (_measureX_ _measureRight_ _measureLeft_), (_measureX_ _measureY_), _measure_
+                border-top-width: auto, _measure_
+                border-right-width: auto, _measure_
+                border-bottom-width: auto, _measure_
+                border-left-width: auto, _measure_
+            border-style: (_BORDERTYPEtop_ _BORDERTYPEright_ _BORDERTYPEbottom_ _BORDERTYPEleft_), (_BORDERTYPEx_ _BORDERTYPEright_ _BORDERTYPEleft_), (_BORDERTYPEx_ _BORDERTYPEy_), _BORDERTYPE_
+            border-color: (_COLORtop_ _COLORright_ _COLORbottom_ _COLORleft_), (_COLORx_ _COLORright_ _COLORleft_), (_COLORx_ _COLORy_), _COLOR_
+            border-radius: _allOfBottom_
+                border-top-left-radius: (_measureTop_, _measureLeft_), __measure_
+                border-top-right-radius: (_measureTop_, _measureRight_), __measure_
+                border-bottom-right-radius: (_measureBottom_, _measureRight_), __measure_
+                border-bottom-left-radius: (_measureBottom_, _measureLeft_), __measure_
+            border-spacing: _measure_                                                                                                                                                                   ===> spaces between cells
+    [7] - outline: _allOfBottom_
+            outline-width: auto, _measure_
+            outline-style: _BORDERTYPE_
+            outline-color: _COLOR_
+    [8] - display: block, inline, inline-block, none, flex, inline-flex, grid, inline-grid                                                                                                              ===> `flex` or `inline-flex` to add flex direction, `grid` or `inline-grid` to add grid direction
+    [9] - visibility: visible, hidden
+    [10] - width: _measure_, fit-content
+            min-width: _measure_
+            max-width: _measure_
+    [11] - height: _measure_, fit-content
+            min-height: _measure_
+            max-height: _measure_
+    [12] - overflow: visible, hidden, scroll, auto
+            overflow-x: visible, hidden, scroll, auto
+            overflow-y: visible, hidden, scroll, auto
+    [13] - text-shadow: _measureVertical_ _measureHorizontal_ _measureBlur_ _COLOR_                                                                                                                     ===> we can use more than one shadow separated by `,`
+    [14] - text-align: left, center, right
+    [15] - direction: ltr, rtl
+    [16] - vertical-align: top, middle, bottom                                                                                                                                                          ===> to align text with image
+    [17] - text-decoration: none, line-through, underline, overline
+    [18] - text-transform: capitalize, uppercase, lowercase
+    [19] - letter-space: _measure_
+    [20] - word-space: _measure_
+    [21] - line-height: _measurePersent_
+    [22] - text-indent: _measure_                                                                                                                                                                       ===> space before sentence
+    [23] - white-space: normal, nowrap
+    [24] - word-break: normal, break-word, break-all
+    [25] - text-overflow: ellipsis                                                                                                                                                                      ===> if text is big add 3 dots at the end
+    [26] - font-family: _font_
+    [27] - font-style: normal, italic
+    [28] - font-variant: small-caps                                                                                                                                                                     ===> change in font size in the same sentence
+    [29] - font-weight: normal, (100 - 900), bold
+    [30] - cursor: pointer, grab, move
+    [31] - float: left                                                                                                                                                                                  ===> to set the elements to swim in page out of parent (exception if parent overflow is hidden) according to direction
+    [32] - clear: top, bottom, both                                                                                                                                                                     ===> to create element after all things before this one
+    [33] - opacity: (0 - 1)
+    [34] - position: static, relative, absolute, fixed, sticky                                                                                                                                          ===> `sticky` is position static untill scroll to this one then convert to fixed
+    [35] - z-index: _measure_
+            top: _measure_
+            bottom: _measure_
+            right: _measure_
+            left: _measure_
+    [36] - list-style: _allOfBottom_
+            lsit-style-type: disc, armenian, none
+            list-style-position: outside, inside
+            list-style-image: url("_path_")
+    [37] - content: ("_text_", counter(_counterVar_), attr(data-text), url("_path_")) ...                                                                                                               ===> `data-text` is get attribute data in the element
+    [38] - counter-increment: _counterVar_
+    [39] - box-shaow: _measureHorizontal_ _measureVertical_ _measureBlur_ _measureSpread_ _COLOR_ (inset, outset)                                                                                       ===> we can use more than one shadow separated by `,`
+    [40] - box-sizing: content-box, border-box
+    [41] - transition: _allOfBottom_, ...
+            transition-property: all, _property_
+            transition-duration: _measureTime_
+            transition-delay: _measureTime_
+            transition-timing-function: ease, linear, ease-in, ease-out, ease-in-out
+
+    [42] - flex-flow: _allOfBottom_                                                                                                                                                                     ===> must element `display: flex, inline-flex`
+            flex-direction: row, row-reverse, column, column-reverse
+            flex-wrap: nowrap, wrap, wrap-reverse
+           justify-content: flex-start, flex-end, center, space-between, space-around, space-evenly                                                                                                     ===> virtically, to justify overflow content, `space-between` and `space-around` if total width of childs less than parent
+           align-items: stertch, flex-start, flex-end, center                                                                                                                                           ===> horizontally, default the content is stretched by height of parent
+           align-content: stertch, flex-start, flex-end, center, space-between, space-arround, space-evenly
+    [43] - flex: _allOfBottom_
+            flex-grow: _measure_                                                                                                                                                                        ===> priority by heighest _measure_
+            flex-shrink: _measure_                                                                                                                                                                      ===> priority by heighest _measure_
+            flex-basis: auto, _measure_                                                                                                                                                                 ===> the _measure_ can be virtically or horizontally according to `flex-direction`
+           order: _measure_                                                                                                                                                                             ===> priority by lowest _measure_
+           align-self: stertch, flex-start, flex-end, center
+
+    [44] - filter: grayscale(_measure_) blur(_measure_) invert(_measure_) opacity(_measure_) drop-shadow(_measure_)
+    [45] - caret-color: _COLOR_                                                                                                                                                                         ===> color of text arow place
+    [46] - pointer-events: auto, none
+
+    [47] - grid-template: _measureRows_ / _measureColumns_
+            grid-template-columns: _measure_ ..., repeat(_int_, _measure_), minmax(_intMin_, _intMax_), _int_fr                                                                                         ===> number of _measure_s is number of columns, `fr` the number of fractions, `repeat(_int_)` _int_ can be `auto-fill`, `minmax()` can be inside `repeat()`
+                column-gap: _measure_
+            grid-template-rows: _measure_ ..., repeat(_int_, _measure_), minmax(_intMin_, _intMax_), _int_fr                                                                                            ===> number of _measure_s is number of rows, `fr` the number of fractions, `repeat(_int_)` _int_ can be `auto-fill`, `minmax()` can be inside `repeat()`
+                row-gap: _measure_
+           gap: _measureRow_ _measureColumn_
+           justify-content: flex-start, flex-end, center, space-between, space-around, space-evenly                                                                                                     ===> virtically, to justify overflow content, `space-between` and `space-around` if total width of childs less than parent
+           align-content: stertch, flex-start, flex-end, center, space-between, space-arround, space-evenly
+           grid-template-areas: "_varArea_ ... . ..." "..."                                                                                                                                             ===> number of _varArea_ explain the number of columns according number of fractions in column or without assign anything, `.` is empty column, must `fr` to separate them, `"..."` to add row
+    [48] - grid-area: _varArea_, _intRowStart_ / _intColumnStart_ / _intRowEnd_ / _intColumnEnd_
+            grid-column: (auto, span _intLength_, _intStart_) / (auto, span _intLength_, _intEnd_)                                                                                                      ===> to increase width, `span _intLength_` to increase by length
+                grid-column-start: auto, span _intLength_, _intStart_
+                grid-column-end: auto, span _intLength_, _intStart_
+            grid-row: (auto, span _intLength_, _intStart_) / (auto, span _intLength_, _intEnd_)                                                                                                         ===> to increase width, `span _intLength_` to increase by length
+                grid-row-start: auto, span _intLength_, _intStart_
+                grid-row-end: auto, span _intLength_, _intStart_
+
+    [49] - transform: _TRANS_
+           transform-origin: _measreX_ _measureY_                                                                                                                                                       ===> the point of transformation
+           prespective: _measure_                                                                                                                                                                       ===> distance from me to element
+           backface-visibility: hidden                                                                                                                                                                  ===> if rotated the back side will visible or not
+           transform-style: flat, preserve-3d                                                                                                                                                           ===> to support 3d rotation of 2 elements and must this property for the parent
+   
+    [50] - animation: _allOfBottom_
+            animation-name: _animationName_
+            animation-duration: _measreTime_
+            animation-timing-function: ease, linear
+            animation-delay: _measureTime_
+            animation-iteration-count: _int_, infinite
+            animation-direction: normal, reverse, alternate, alternate-reverse                                                                                                                          ===> `alternate` to return to origin value
+           animation-fill-mode: none, forwards, backwords, both
+           animation-play-state: running, paused
+
+@keyframe _animationName_ {
+    from, 0% {
+        _propety_: _value_;
+        ...
+    }
+    to, _measurePersentTime_ {
+        _propety_: _value_;
+        ...
+    }
+}
+
+@media _mediaCondition_ {
+
+}
+
+
+_pseudoClass_:
+    [1] - hover                                                                                                                                                                                         ===> onmouseover
+    [2] - checked                                                                                                                                                                                       ===> oncheck in checkbox
+    [3] - visited                                                                                                                                                                                       ===> onvisit link
+    [4] - empty                                                                                                                                                                                         ===> if element is empty
+    [5] - focus                                                                                                                                                                                         ===> onfocus input
+    [6] - :first-letter
+    [7] - :first-line
+    [8] - :selection                                                                                                                                                                                    ===> to customize selection text
+    [9] - :after                                                                                                                                                                                        ===> must has `content` property
+    [10] - :before                                                                                                                                                                                      ===> must has `content` property
+*/
+/*
+https://caniuse.com/
+https://cssbattle.dev/
+https://www.frontendmentor.io/
+
+https://fonts.google.com/
+https://fontawesome.com/
+*/
+/*
+advices:
+[1] - don't start the text from begainning of window (container class)
+[2] - styling in browser then in IDE
+[3] - float is to text in container, flex to header, and grid to body
+*/
+body {
+	background-color: black;
+}
+
+* {
+	color: white;
+}
+
+._parent_:hover ._child_ {
+
+} /* to change style of child while hover on the parent */
