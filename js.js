@@ -235,6 +235,15 @@ _keywordVar_ _nameFunVar_ = function (_argName_, ..., ..._argNameArray_) {
     return _data_;
 };
 _nameFunVar_(_argData_, ...);
+
+# _arrowFunction_
+() => _data;
+
+() => {
+    _statement_;
+    ...
+    return _data_;
+}
 */
 /*
 clear()
