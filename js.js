@@ -57,6 +57,7 @@ let _data_ = "_data_", _style_ = "color: red";
 
 _data_ _nullishCoalescingOperator_ _data_                                           ===> if the first data is (undefined or null or 0) return the second data
 [1] - ??
+[2] - ||
 */
 /*
 _keywordVar_ _nameVar_ = _dataValue_
@@ -211,7 +212,7 @@ do {                                                                            
     _sequenceControl_;
 } while (_statementOperator_)
 
-_sequenceControl_
+# _sequenceControl_
 [1] - break
 [2] - continue
 [3] - break _forLoopName_
@@ -219,11 +220,21 @@ _sequenceControl_
 [5] - _nothing_
 */
 /*
-function _funcName_(_argName_, ...) {
+# _statndardFunction_
+function _funcName_(_argName_ = _argValue_, ..., ..._argNameArray_) {
     _statement_;
     ...
-}
+    return _data_;
+};
 _funcName_(_argData_, ...);
+
+# _anonymousFunction_
+_keywordVar_ _nameFunVar_ = function (_argName_, ..., ..._argNameArray_) {
+    _statement_;
+    ...
+    return _data_;
+};
+_nameFunVar_(_argData_, ...);
 */
 /*
 clear()
