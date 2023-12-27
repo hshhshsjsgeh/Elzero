@@ -66,7 +66,7 @@ _elementID_                                                                     
 
 # _keywordVar_
 [1] - var                                                                           ===> √ redeclared, √ revalue, X get err if didn't initialize, √ window scope
-[2] - let                                                                           ===> X redeclared, √ revalue, √ get err if didn't initialize, X window scope
+[2] - let                                                                           ===> X redeclared, √ revalue, √ get err if didn't initialize, X window scope, to set local scope
 [3] - const                                                                         ===> X redeclared, X revalue, √ get err if didn't initialize, X window scope
 
 `_data_ ${_nameVar_} ...`                                                           ===> _templateLitral_
