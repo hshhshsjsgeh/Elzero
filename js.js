@@ -237,9 +237,9 @@ _keywordVar_ _nameFunVar_ = function (_argName_, ..., ..._argNameArray_) {
 _nameFunVar_(_argData_, ...);
 
 # _arrowFunction_
-() => _data;
+(_argName_, ..., ..._argNameArray_) => _data;
 
-() => {
+(_argName_, ..., ..._argNameArray_) => {
     _statement_;
     ...
     return _data_;
