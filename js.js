@@ -140,6 +140,11 @@ _elementID_                                                                     
 [14] - reverse()
 [15] - concat(_data_, ...)
 [16] - join(_stringSeparator_)                                                      ===> to string
+
+# _higherOrderFunction_
+[1] - map((element, index, array) => _data_, _thisData_)                            ===> will get data as array, _thisData_ returned in function with `this`
+[2] - filter((element, index, array) => _boolean_, _thisData_)                      ===> will get data as array, _thisData_ returned in function with `this`, if _data_OR_Boolean_ equal to `false` will `continue`
+[3] - reduce((accumelator, current, index, array) => _data_, _initData_)            ===> to collect the `accumelator` and `current` and _initData_
 # _array__builtinArray_
 [1] - [_intNumber_]
 # _builtinArray_
@@ -224,7 +229,7 @@ do {                                                                            
 function _funcName_(_argName_ = _argValue_, ..., ..._argNameArray_) {
     _statement_;
     ...
-    return _data_;
+    return _data_OR_This_;
 };
 _funcName_(_argData_, ...);
 
@@ -232,7 +237,7 @@ _funcName_(_argData_, ...);
 _keywordVar_ _nameFunVar_ = function (_argName_, ..., ..._argNameArray_) {
     _statement_;
     ...
-    return _data_;
+    return _data_OR_This_;
 };
 _nameFunVar_(_argData_, ...);
 
