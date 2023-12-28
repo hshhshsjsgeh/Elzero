@@ -143,6 +143,7 @@ _elementID_                                                                     
 
 # _higherOrderFunction_
 [1] - map((element, index, array) => _data_, _thisData_)                            ===> will get data as array, _thisData_ returned in function with `this`
+[2] - forEach((element, index, array) => _statement_, _thisData_)                   ===> will get data as array, _thisData_ returned in function with `this`, will not return data
 [2] - filter((element, index, array) => _boolean_, _thisData_)                      ===> will get data as array, _thisData_ returned in function with `this`, if _data_OR_Boolean_ equal to `false` will `continue`
 [3] - reduce((accumelator, current, index, array) => _data_, _initData_)            ===> to collect the `accumelator` and `current` and _initData_
 # _array__builtinArray_
