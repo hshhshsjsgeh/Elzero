@@ -5,7 +5,7 @@ let _data_ = "_data_", _style_ = "color: red";
 [1] - string
 [2] - number (intger, float, double, hex)                                           ===> "" equal to `false`, can writed as `1_000_000` or `1e6`
 [3] - boolean
-[4] - object (array, dictionary)
+[4] - object (array, dictionary)                                                    ===> {_propertyName_: _data_OR_Method_, ..., "_propertyName_": _data_OR_Method_, ...}
 [5] - undefined                                                                     ===> equal to `false`, if (_nameVar_ undefined)
 [6] - null                                                                          ===> equal to `false`
 [7] - NaN                                                                           ===> concatination of string and number
@@ -152,6 +152,15 @@ _elementID_                                                                     
 [1] - Array.isArray(_data_)
 */
 /*
+# _builtinObject_
+[1] - _object_._propertyName_                                                       ===> to access and edit
+[2] - _object_["_propertyName_"]                                                    ===> to access and edit
+[3] - new Object()                                                                  ===> to create new object
+[4] - Object.create(_object_)                                                       ===> to create new object, but showed in `_proto_` property
+[4] - Object.assign(_object_, ...)                                                  ===> to create new object, but showed in `_proto_` property
+[5] - this                                                                          ===> to access the parent object
+*/
+/*
 # _proCondition_
 if (_statementOperator_) {
     _statement_;
@@ -260,6 +269,7 @@ document.write(_data_);
 console.log(_data_ + "%c_data_ ...", ..., _style_, ...);
 console.error(_data_);
 console.table([_data_, ...]);
+"use strict";                                                                       ===> not with block of code, not with function has default prameters
 */
 
 for (let i = 0; i < 10; i++) {
