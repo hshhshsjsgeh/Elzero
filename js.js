@@ -272,6 +272,84 @@ console.table([_data_, ...]);
 "use strict";                                                                       ===> not with block of code, not with function has default prameters
 */
 
+/*
+document._elementObject_._attribute_
+
+# _elementObject_
+[1] - getElementById("_elementId_")
+[2] - getElementsByTagName("_elementTag")
+[3] - getElementsByClassName("_elementClass_")
+[4] - querySelector("#_elementId_ ._elementClass_ _elementTag_ ...")
+[5] - querySelectorAll("#_elementId_ ._elementClass_ _elementTag_ ...")
+[6] - title
+[7] - body
+[8] - forms
+[9] - _elementName_                                                                 ===> <input name="_elementName_"/>
+[10] - links
+[11] - styleSheets[_intIndex_].rules[_intIndex_].style._cssStyle_
+
+# _attribute_
+[1] - value                                                                         ===> input
+[2] - href                                                                          ===> a
+[3] - innerHTML
+[4] - textContent
+[5] - innerText
+[6] - src                                                                           ===> img
+[7] - alt                                                                           ===> img
+[8] - title                                                                         ===> img
+[9] - id
+[10] - className
+[11] - getAttribute("_attributeName_")
+[12] - setAttribute("_attributeName_", "_value_")
+[13] - attributes
+[14] - hasAttribute("_attributeName")
+[15] - hasAttributes()
+[16] - removeAttribute("_attributeName_")
+[17] - createAttribute("_attributeName_")
+[18] - setAttributeNode(_attributeCreated_)
+[19] - createElement("_elementTag_")
+[20] - createTextNode("_date_")
+[21] - createComment("_data_")
+[22] - appendChild(_data_)
+[23] - children
+[24] - childNodes
+[25] - firstChild
+[26] - firstElementChild
+[27] - lasthild
+[28] - lastElementChild
+[29] - onclick = _function_
+[30] - oncontextmenu = _function_
+[31] - onmouseenter = _function_
+[32] - onmouseleave = _function_
+[33] - onload = _function_
+[34] - onscroll = _function_
+[35] - onresize = _function_
+[36] - onfocus = _function_
+[37] - onblur = _function_
+[38] - onsubmit = _function_
+    [1] - function (event) {
+        ...
+        event.preventDefault();                                                     ===> to prevent default action of the element as `a` will prevent go to link
+    }
+[39] - click
+[40] - focus
+[41] - blur
+[42] - classList._action_
+    [1] - length
+    [2] - contains("_elementClass_")
+    [3] - item(_intIndex_)
+    [4] - add("_elementClass_")
+    [5] - remove("_elementClass_")
+    [6] - toggle("_elementClass_")
+[43] - style._cssStyle_
+    [1] - _cssProperty_
+    [2] - cssText
+    [3] - removeProperty("_propertyName_")
+    [4] - setProperty("_propertyName_", "_value_", ...)
+*/
+
+document.body
+
 for (let i = 0; i < 10; i++) {
     console.log(i + 1);
 }
