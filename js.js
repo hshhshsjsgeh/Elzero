@@ -346,6 +346,11 @@ document._elementObject_._attribute_
     [2] - cssText
     [3] - removeProperty("_propertyName_")
     [4] - setProperty("_propertyName_", "_value_", ...)
+[44] - before(_data_)                                                               ===> element
+[45] - after(_data_)                                                                ===> element
+[46] - append(_data_)                                                               ===> element
+[47] - prepend(_data_)                                                              ===> element
+[48] - remove()                                                                     ===> element
 */
 
 document.body
