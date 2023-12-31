@@ -118,6 +118,7 @@ _elementID_                                                                     
 [10] - Math.min(_number_, ...)
 [11] - Math.pow(_number_, _number_)
 [12] - Math.random()
+[13] - Math.PI
 
 # _builtinBoolean_
 [1] - Boolean(_data_)
@@ -330,6 +331,8 @@ document._elementObject_._attribute_
     [1] - function (event) {
         ...
         event.preventDefault();                                                     ===> to prevent default action of the element as `a` will prevent go to link
+        event.clientX;
+        event.clientY;
     }
 [39] - click
 [40] - focus
@@ -351,6 +354,61 @@ document._elementObject_._attribute_
 [46] - append(_data_)                                                               ===> element
 [47] - prepend(_data_)                                                              ===> element
 [48] - remove()                                                                     ===> element
+[49] - nextSibling
+[50] - nextElementSibling
+[51] - previousSibling
+[52] - previousElementSibling
+[53] - parentElement
+[54] - cloneNode(_boolWithAttribute_)
+[55] - addEventListener("_event_", _function_)                                      ===> can add more than one function, can created with undefined element, the bessssst
+    [1] - function (event) {
+        ...
+        event.target._attribute_;
+        event.preventDefault();                                                     ===> to prevent default action of the element as `a` will prevent go to link
+        event.clientX;
+        event.clientY;
+    }
+*/
+
+/*
+_canvasElement_.getContext("2d")._canvasStyleFuncton_;
+[1] - fillStyle = "_color_"
+[2] - globalAlpha = _intToOne_
+[2] - createLinearGradient(_x1_, _y1_, _x2_, _y2_)
+      addColorStop(_index_, _color_)
+[3] - shadowColor = _color_
+      shadowBlur = _int_
+      shadowOffsetX = _int_
+      shadowOffsetY = _int_
+[3] - createPattern(_imageElement_, "_intRepeat_")                                  ===> in a variable
+    [1] - repeat
+    [2] - no-repeat
+    [3] - repeat-x
+    [4] - repeat-y
+[4] - scale(_x_, _y_)                                                               ===> and scale points
+[5] - translate(_xAdded_, _yAdded_)
+[4] - fillRect(_x_, _y_, _w_, _h_)]
+[5] - strokeStyle = _color_
+[6] - lineWidth = _int_
+[7] - strokeRect(_x_, _y_, _w_, _h_)
+[8] - font = "_fontStyle_"
+[9] - textAlign = "_align_"
+    [1] - start
+    [2] - end
+    [3] - left
+    [4] - right
+[9] - fillText("_string_", _x_, _y_)
+[10] - strokeText("_string_", _x_, _y_)
+[11] - beginPath()
+[12] - moveTo(_x_, _y_)                                                             ===> start
+[13] - lineTo(_x_, _y_)
+       ...
+[14] - arc(_x_, _y_, _radius_, _startAngleRad_, _endAngleRad_, _boolAntiClockWise)  ===> 1 rad = Math.PI
+[15] - closePath()
+[16] - stroke()
+[17] - fill()
+[18] - save()
+[19] - restore()
 */
 
 document.body
