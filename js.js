@@ -421,3 +421,7 @@ for (let i = 0; i < 10; i++) {
 // http://es6-features.org/#Constants
 // https://leetcode.com/
 // https://babeljs.io/
+
+/*
+let canvas = Array.prototype.slice.call(document.getElementsByClassName("logo-cnvs"));
+*/
