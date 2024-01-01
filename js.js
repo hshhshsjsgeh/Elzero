@@ -151,6 +151,7 @@ _elementID_                                                                     
 [1] - [_intNumber_]
 # _builtinArray_
 [1] - Array.isArray(_data_)
+[2] - Array.prototype.slice.call(_htmlCollection_)
 */
 /*
 # _builtinObject_
