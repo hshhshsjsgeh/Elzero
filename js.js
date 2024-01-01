@@ -422,6 +422,17 @@ for (let i = 0; i < 10; i++) {
 // https://leetcode.com/
 // https://babeljs.io/
 
-/*
-let canvas = Array.prototype.slice.call(document.getElementsByClassName("logo-cnvs")).map(e => e.getContext("2d"));
-*/
+
+let canvas = Array.prototype.slice.call(document.getElementsByClassName("logo-cnvs")).map(e => e.getContext("2d")),
+    circle = 2 * Math.PI;
+for (let i = 1; i < 20; i++) {
+    canvas.map(e => e.fillRect(0, 50 * i, 1000, 1));
+    canvas.map(e => e.fillRect(50 * i, 0, 1, 1000));
+};
+canvas.map(e => e.beginPath());
+canvas.map(e => e.lineWidth = 50);
+canvas.map(e => e.arc(1.5 * 50, 1.5 * 50, 1 * 50, (90/360) * circle, (330/360) * circle));
+canvas.map(e => e.arc(4.5 * 50, 6.5 * 50, 1 * 50, (-30/360) * circle, (210/360) * circle));
+canvas.map(e => e.arc(7.5 * 50, 1.5 * 50, 1 * 50, (-150/360) * circle, (90/360) * circle));
+canvas.map(e => e.closePath());
+canvas.map(e => e.stroke());

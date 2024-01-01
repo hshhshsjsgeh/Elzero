@@ -241,7 +241,7 @@ advices:
 [3] - float is to text in container, flex to header, and grid to body
 */
 body {
-	background-color: black;
+	background-color: white;
 }
 
 * {
