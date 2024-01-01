@@ -423,5 +423,5 @@ for (let i = 0; i < 10; i++) {
 // https://babeljs.io/
 
 /*
-let canvas = Array.prototype.slice.call(document.getElementsByClassName("logo-cnvs"));
+let canvas = Array.prototype.slice.call(document.getElementsByClassName("logo-cnvs")).map(e => e.getContext("2d"));
 */
