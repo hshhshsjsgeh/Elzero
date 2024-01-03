@@ -114,6 +114,16 @@ if __name__ == '__main__':
 #         },
 #     },
 # ]
+# ...
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends._sqlMangerLibrary_',
+#         ...
+#         'USER': '_userName_',
+#         'PASSWORD': '_password_',
+#         'HOST': '_host_',
+#     }
+# }
 # -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # | admin.py |
 # ------------
@@ -185,10 +195,10 @@ if __name__ == '__main__':
 # _modelName_.objects.filter(_tableName_=_data_, _tableName__function_=_data_)
 # _modelName_.objects.order_by('_data_')
 # _modelName_.objects.get(_tableName_=_data_, _tableName__function_=_data_)
-# _modelSelectVar_._modelName__set.count()
-# _modelSelectVar_._modelName__set.all()
+# _modelSelectVar_._forignModelName__set.count()
+# _modelSelectVar_._forignModelName__set.all()
 #
-# _modelCreateVar_ = _modelSelectVar_._modelName__set.create(_tableName_='_data_', ...)
+# _modelCreateVar_ = _modelSelectVar_._forignModelName__set.create(_tableName_='_data_', ...)
 # -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # | views.py |
 # ------------
