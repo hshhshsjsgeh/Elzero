@@ -414,6 +414,7 @@ window._browserObject_
     [2] - getItem("_localstorageProperty_")
     [3] - _localstorageProperty_
     [4] - ["_localstorageProperty_"]
+    [5] - removeItem("_localstorageProperty_")
 */
 
 /*
