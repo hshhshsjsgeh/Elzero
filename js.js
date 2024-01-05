@@ -410,7 +410,15 @@ window._browserObject_
 [17] - scrollX
 [18] - scrollY
 [19] - localStorage._localstorageFunction_
-    [1] - setItem("_localstorageProperty_", "_data_")
+    [1] - setItem("_localstorageProperty_", _data_)
+    [2] - getItem("_localstorageProperty_")
+    [3] - _localstorageProperty_
+    [4] - ["_localstorageProperty_"]
+    [5] - removeItem("_localstorageProperty_")
+    [6] - clear()
+    [7] - key(_intIndex_)
+[19] - sessionStorage._localstorageFunction_
+    [1] - setItem("_localstorageProperty_", _data_)
     [2] - getItem("_localstorageProperty_")
     [3] - _localstorageProperty_
     [4] - ["_localstorageProperty_"]
