@@ -416,6 +416,7 @@ window._browserObject_
     [4] - ["_localstorageProperty_"]
     [5] - removeItem("_localstorageProperty_")
     [6] - clear()
+    [7] - key(_intIndex_)
 */
 
 /*
