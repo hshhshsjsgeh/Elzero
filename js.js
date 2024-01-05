@@ -393,6 +393,22 @@ window._browserObject_
     [8] - assign("_ur_")                                                            ===> to edit history of visited websites
 [7] - close()
 [8] - open("_url_", "__target_", "_feature_")                                       ===> __target_ as _self and _blank, _feature_ as "width=_int_,height=_int_,top=_int_,bottom=_int_,right=_int_,left=_int_"
+[9] - history._parameter_
+    [1] - length
+    [2] - back()
+    [3] - forward()
+    [4] - go(_intStep_)                                                             ===> _intStep_ can be negative
+[10] - stop()
+[11] - print()
+[12] - focus()
+[13] - scrollTo(_x_, _y_, "_behavior_")
+       scroll(_x_, _y_, "_behavior_")                                               ===> not supported
+    [1] - smooth
+[14] - scrollBy(_x_, _y_)                                                           ===> to scroll after scroll
+[15] - pageXOffset
+[16] - pageYOffset
+[17] - scrollX
+[18] - scrollY
 */
 
 /*
