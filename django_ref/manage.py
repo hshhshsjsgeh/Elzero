@@ -129,16 +129,18 @@ if __name__ == '__main__':
 # ------------
 # class _inlineAdminClassName_(django.contrib.admin._inlineType_):
 # [1] - _inlineType_
-#     [1] - StackedInline
-#     [2] - TabularInline
-#     model = _modelName_                                                                                   ===> another model
+#     [1] - StackedInline                                                                                               ===> to be imported to another _adminClassName_
+#     [2] - TabularInline                                                                                               ===> as before but different in structure shape
+#     model = _modelName_                                                                                               ===> another model
 #     extra = _intRepeat_
 #
 # class _adminClassName_(django.contrib.admin.ModelAdmin):
-#     list_display = ('_columnModelName_', '_functionModelName_', ...)
-#     fields       = ['_columnModelName_', ...]
-#     fieldsets    = [('_sectionName_', {'fields': ['_columnModelName_', ...], ...}), ...]
-#     inlines      = [_inlineAdminClassName_, ...]
+#     list_display  = ('_columnModelName_', '_functionModelName_', ...)
+#     list_filter   = ['_orderingColumnModelName_', ...]
+#     fields        = ['_columnModelName_', ...]                                                                        ===> the fileds when edit or add
+#     fieldsets     = [('_sectionName_', {'fields': ['_columnModelName_', ...], 'classes': ['collapse'], ...}), ...]    ===> the fileds when edit or add, `collapse` to hide and unhide data
+#     inlines       = [_inlineAdminClassName_, ...]
+#     search_fields = ['_columnModelName_', ...]                                                                        ===> to add search bar
 #
 # django.contrib.admin.site.register(_modelName_, _adminClassName_)
 # -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -152,15 +154,15 @@ if __name__ == '__main__':
 #         [2] - IntegerField()
 #         [3] - DateTimeField('_subject_')
 #         [4] - BigAutoField()
-#         [5] - TextChoices(_value_, ...)                                                                   ===> to access (TextChoices(_value_, ...).choices)
+#         [5] - TextChoices(_value_, ...)                                                                               ===> to access (TextChoices(_value_, ...).choices)
 #
-#         [5] - ForeignKey(_modelName_, ondelete=django.db._modelNameOnDelete_)                             ===> many to one (model has one model only)
+#         [5] - ForeignKey(_modelName_, ondelete=django.db._modelNameOnDelete_)                                         ===> many to one (model has one model only)
 #             [1] - _modelNameOnDelete_
 #                 [1] - models.SET_NULL
 #                 [2] - models.CASCADE
 #         [7] - ManyToManyField(_modelName_, through='_modelName_')
 #     [2] - _fieldOptionModelName_
-#         [1] - '_data_'                                                                                    ===> the subject of column
+#         [1] - '_data_'                                                                                                ===> the subject of column
 #               verbose_name = '_data_'
 #         [2] - default      = _data_
 #         [3] - null         = _bool_
@@ -170,7 +172,7 @@ if __name__ == '__main__':
 #         [7] - primary_key  = _bool_
 #         [8] - unique       = _bool_
 #
-#     @django.contrib.admin.display(boolean=_bool_, ordering=_columnModelName_, description='_data_')
+#     @django.contrib.admin.display(boolean=_bool_, ordering=_columnModelName_, description='_data_')                   ===> to be used in `list_order` in admin
 #
 #     def __str__(self):
 #         return self._columnModelName_
@@ -253,8 +255,8 @@ if __name__ == '__main__':
 #             [3] - assertContains(_var_, _dataWanted_)
 #             [4] - assertQuerysetEqual(_varArray_, _array_)
 # -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# | shell (models.py) |
-# ---------------------
+# | shell (test.py) |
+# -------------------
 # django.test.utils.setup_test_enviroment()
 #
 # _clientVar_ = django.test.utils.Client()
