@@ -409,6 +409,11 @@ window._browserObject_
 [16] - pageYOffset
 [17] - scrollX
 [18] - scrollY
+[19] - localStorage._localstorageFunction_
+    [1] - setItem("_localstorageProperty_", "_data_")
+    [2] - getItem("_localstorageProperty_")
+    [3] - _localstorageProperty_
+    [4] - ["_localstorageProperty_"]
 */
 
 /*
