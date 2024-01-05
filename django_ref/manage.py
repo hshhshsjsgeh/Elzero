@@ -232,11 +232,11 @@ if __name__ == '__main__':
 #             def get_context_data(self, ...):
 #                 _statement_
 #         [2] - DetailView
-#             model = _modelName_
+#             model = _modelName_                                                                                               ===> as context {'_modelNameWithLowerCase_': _modelName_}
 #             template_name = '_htmlPath_'
 #         [3] - ListView
-#             template_name = '_htmlPath_s'
-#             context_object_name = 'latest_question_list'
+#             template_name = '_htmlPath_'
+#             context_object_name = '_queryName_'
 #             def get_queryset(self):
 #                 return _dataModelName_
 # -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -262,6 +262,26 @@ if __name__ == '__main__':
 # _responseClientVar_ = _clientVar_.get('_path_')
 # _responseClientVar_.status_code
 # _responseClientVar_._context_[_data_]
+# -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# | index.html |
+# --------------
+# {% load static %}
+#
+# {% block _blockName_ %}
+# {% endblock %}
+#
+# {% if latest_question_list %}
+# {% else %}
+# {% endif %}
+#
+# {% for question in latest_question_list %}
+#     {{ forloop.counter }}
+#     {{ choice.votes|pluralize }}
+# {% endfor %}
+#
+# {{ _contextVar_ }}
+#
+# {% url '_appName_:_indexName_' _pathArgName_ %}
 
 # urls.py
 # -------

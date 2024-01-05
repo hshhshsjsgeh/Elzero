@@ -243,7 +243,7 @@ function _funcName_(_argName_ = _argValue_, ..., ..._argNameArray_) {
     ...
     return _data_OR_This_;
 };
-_funcName_(_argData_, ...);
+_funcName_(_argVar_: _argData_, ...);
 
 # _anonymousFunction_
 _keywordVar_ _nameFunVar_ = function (_argName_, ..., ..._argNameArray_) {
@@ -251,7 +251,7 @@ _keywordVar_ _nameFunVar_ = function (_argName_, ..., ..._argNameArray_) {
     ...
     return _data_OR_This_;
 };
-_nameFunVar_(_argData_, ...);
+_nameFunVar_(_argVar_: _argData_, ...);
 
 # _arrowFunction_
 (_argName_, ..., ..._argNameArray_) => _data;
@@ -268,9 +268,9 @@ typeof(_data_)
 typeof _data_
 window.alert(_data_);
 document.write(_data_);
-console.log(_data_ + "%c_data_ ...", ..., _style_, ...);
-console.error(_data_);
-console.table([_data_, ...]);
+window.console.log(_data_ + "%c_data_ ...", ..., _style_, ...);
+window.console.error(_data_);
+window.console.table([_data_, ...]);
 "use strict";                                                                       ===> not with block of code, not with function has default prameters
 */
 
@@ -372,6 +372,30 @@ document._elementObject_._attribute_
 */
 
 /*
+window._browserObject_
+
+# _browserObject_
+[1] - alert(_data_)
+[2] - confirm(_data_)                                                               ===> yes or no, added to variable
+[3] - prompt(_data_, _data_)                                                        ===> to get data, added to variable, second _data_ is default input
+[4] - setTimeout(_function_, _intTimeMillisecond_, _arguments_, ...)                ===> if add function without ()
+[5] - clearTimeout(_settimeoutFunctionVar_)
+[4] - setInterval(_function_, _intTimeMillisecond_, _arguments_, ...)               ===> if add function without ()
+[5] - clearInterval(_settimeoutFunctionVar_)
+[6] - location._parameter_                                                          ===> _parameter_ can be set with equalize
+    [1] - href
+    [2] - host
+    [3] - hostname
+    [4] - protocol
+    [5] - hash
+    [6] - reload()
+    [7] - replace("_url_")                                                          ===> to edit history of visited websites
+    [8] - assign("_ur_")                                                            ===> to edit history of visited websites
+[7] - close()
+[8] - open("_url_", "__target_", "_feature_")                                       ===> __target_ as _self and _blank, _feature_ as "width=_int_,height=_int_,top=_int_,bottom=_int_,right=_int_,left=_int_"
+*/
+
+/*
 _canvasElement_.getContext("2d")._canvasStyleFuncton_;
 [1] - fillStyle = "_color_"
 [2] - globalAlpha = _intToOne_
@@ -388,7 +412,8 @@ _canvasElement_.getContext("2d")._canvasStyleFuncton_;
     [4] - repeat-y
 [4] - scale(_x_, _y_)                                                               ===> and scale points
 [5] - translate(_xAdded_, _yAdded_)
-[4] - fillRect(_x_, _y_, _w_, _h_)]
+[4] - fillRect(_x_, _y_, _w_, _h_)
+      clearRect(_x_, _y_, _w_, _h_)
 [5] - strokeStyle = _color_
 [6] - lineWidth = _int_
 [7] - strokeRect(_x_, _y_, _w_, _h_)
