@@ -77,6 +77,12 @@ _elementID_                                                                     
 [2] - let                                                                                           ===> X redeclared, √ revalue, √ get err if didn't initialize, X window scope, to set local scope
 [3] - const                                                                                         ===> X redeclared, X revalue, √ get err if didn't initialize, X window scope
 
+# _dataValue_
+[1] - _data_
+[2] - new _datatype_(_object_)
+    [1] - Set
+    [2] - WeakSet
+
 `_data_ ${_nameVar_} ...`                                                                           ===> _templateLitral_
 */
 /*
@@ -169,6 +175,25 @@ _elementID_                                                                     
 [4] - Object.create(_object_)                                                                       ===> to create new object, but showed in `_proto_` property
 [4] - Object.assign(_object_, ...)                                                                  ===> to create new object, but showed in `_proto_` property
 [5] - this                                                                                          ===> to access the parent object
+*/
+/*
+# _objectSet_.builtinSet_                                                                           ===> can't access children
+[1] - size
+[2] - add()
+[3] - delete(_data_)                                                                                ===> return `false` if not found
+[4] - clear()
+[5] - has(_data_)
+[6] - keys()
+[7] - values()
+[8] - next()
+[9] - value
+*/
+/*
+# _objectWeakSet_.builtinWeakSet_                                                                   ===> can't access children
+[1] - add()
+[2] - delete(_data_)                                                                                ===> return `false` if not found
+[3] - clear()
+[4] - has(_data_)
 */
 /*
 # _proCondition_
