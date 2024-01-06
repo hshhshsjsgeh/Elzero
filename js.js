@@ -58,6 +58,10 @@ let _data_ = "_data_", _style_ = "color: red";
 _data_ _nullishCoalescingOperator_ _data_                                                           ===> if the first data is (undefined or null or 0) return the second data
 [1] - ??
 [2] - ||
+
+# _event_
+[1] - contextmenu
+[2] - click
 */
 /*
 _keywordVar_ _nameVar_ = _dataValue_
