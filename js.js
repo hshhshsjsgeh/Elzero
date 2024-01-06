@@ -3,12 +3,12 @@ let _data_ = "_data_", _style_ = "color: red";
 /*
 # _datatype_ (typeof(_data_), typeof _data_)
 [1] - string
-[2] - number (intger, float, double, hex)                                           ===> "" equal to `false`, can writed as `1_000_000` or `1e6`
+[2] - number (intger, float, double, hex)                                                           ===> "" equal to `false`, can writed as `1_000_000` or `1e6`
 [3] - boolean
-[4] - object (array, dictionary)                                                    ===> {_propertyName_: _data_OR_Method_, ..., "_propertyName_": _data_OR_Method_, ...}
-[5] - undefined                                                                     ===> equal to `false`, if (_nameVar_ undefined)
-[6] - null                                                                          ===> equal to `false`
-[7] - NaN                                                                           ===> concatination of string and number
+[4] - object (array, dictionary)                                                                    ===> {_propertyName_: _data_OR_Method_, ..., "_propertyName_": _data_OR_Method_, ...}
+[5] - undefined                                                                                     ===> equal to `false`, if (_nameVar_ undefined)
+[6] - null                                                                                          ===> equal to `false`
+[7] - NaN                                                                                           ===> concatination of string and number
 
 # _escapeCharacter_
 [1] - \\
@@ -32,11 +32,11 @@ let _data_ = "_data_", _style_ = "color: red";
 [4] - /=
 
 # _increamentOperator_
-[1] - ++_number_                                                                    ===> pre
-[2] - _number_++                                                                    ===> post
+[1] - ++_number_                                                                                    ===> pre
+[2] - _number_++                                                                                    ===> post
 # _decreamentOperator_
-[1] - --_number_                                                                    ===> pre
-[2] - _number_--                                                                    ===> post
+[1] - --_number_                                                                                    ===> pre
+[2] - _number_--                                                                                    ===> post
 
 # _comparisonOperator_
 [1] - >
@@ -45,8 +45,8 @@ let _data_ = "_data_", _style_ = "color: red";
 [4] - <=
 [5] - ==
 [6] - !=
-[7] - ===                                                                           ===> value and type
-[8] - !==                                                                           ===> value and type
+[7] - ===                                                                                           ===> value and type
+[8] - !==                                                                                           ===> value and type
 
 # _logicalOperator_
 [1] - !
@@ -55,21 +55,25 @@ let _data_ = "_data_", _style_ = "color: red";
 [4] - &
 [5] - |
 
-_data_ _nullishCoalescingOperator_ _data_                                           ===> if the first data is (undefined or null or 0) return the second data
+_data_ _nullishCoalescingOperator_ _data_                                                           ===> if the first data is (undefined or null or 0) return the second data
 [1] - ??
 [2] - ||
 */
 /*
 _keywordVar_ _nameVar_ = _dataValue_
+
+_keywordVar_ [_nameVar_OR_Nothing_, ...] = _objectArray_                                            ===> destructuring
+_keywordVar_ {_nameVar_OR_Nothing_: _newNameVar_OR_Nothing_ = _defualtData_, ...} = _object_        ===> destructuring
+
 _nameVar_ _assignmentOperator_ _dataValue_
-_elementID_                                                                         ===> created automatically
+_elementID_                                                                                         ===> created automatically
 
 # _keywordVar_
-[1] - var                                                                           ===> √ redeclared, √ revalue, X get err if didn't initialize, √ window scope
-[2] - let                                                                           ===> X redeclared, √ revalue, √ get err if didn't initialize, X window scope, to set local scope
-[3] - const                                                                         ===> X redeclared, X revalue, √ get err if didn't initialize, X window scope
+[1] - var                                                                                           ===> √ redeclared, √ revalue, X get err if didn't initialize, √ window scope
+[2] - let                                                                                           ===> X redeclared, √ revalue, √ get err if didn't initialize, X window scope, to set local scope
+[3] - const                                                                                         ===> X redeclared, X revalue, √ get err if didn't initialize, X window scope
 
-`_data_ ${_nameVar_} ...`                                                           ===> _templateLitral_
+`_data_ ${_nameVar_} ...`                                                                           ===> _templateLitral_
 */
 /*
 # _string_._builtinString_
@@ -79,18 +83,18 @@ _elementID_                                                                     
 [4] - trim()
 [5] - toUpperCase()
 [6] - toLowercase()
-[7] - indexOf(_string_, _intNumberIndex_)                                           ===> _intNumberIndex_ by default is 0, if not found return -1
-[8] - lastIndexOf(_string_, _intNumberIndex_)                                       ===> _intNumberIndex_ by default is 0, if not found return -1
-[9] - slice(_intNumberStart_, _intNumberEnd_)                                       ===> by default _intNumberEnd_ is to end and not include _intNumberEnd_, _intNumberStart_ can be with negative value
-[10] - split(_stringSeparator_, _intNumberLimit_)                                   ===> _intNumberLimit_ by default is infinity
-[11] - substring(_intNumberStart_, _intNumberEnd_)                                  ===> by default _intNumberEnd_ is to end and not include _intNumberEnd_, _intNumberStart_ and _intNumberEnd_ can be swaped
-[12] - substr(_intNumberStart_, _intNumberLength_)                                  ===> _intNumberLength_ by default is total length, _intNumberStart_ can be with negative value
-[13] - include(_string_, _intNumberLength_)                                         ===> _intNumberLength_ by default is total length
-[14] - startsWith(_string_, _intNumberStart_)                                       ===> _intNumberStart_ by default is 0
-[15] - endsWith(_string_, _intNumberLength_)                                        ===> _intNumberLength_ by default is total length
+[7] - indexOf(_string_, _intNumberIndex_)                                                           ===> _intNumberIndex_ by default is 0, if not found return -1
+[8] - lastIndexOf(_string_, _intNumberIndex_)                                                       ===> _intNumberIndex_ by default is 0, if not found return -1
+[9] - slice(_intNumberStart_, _intNumberEnd_)                                                       ===> by default _intNumberEnd_ is to end and not include _intNumberEnd_, _intNumberStart_ can be with negative value
+[10] - split(_stringSeparator_, _intNumberLimit_)                                                   ===> _intNumberLimit_ by default is infinity
+[11] - substring(_intNumberStart_, _intNumberEnd_)                                                  ===> by default _intNumberEnd_ is to end and not include _intNumberEnd_, _intNumberStart_ and _intNumberEnd_ can be swaped
+[12] - substr(_intNumberStart_, _intNumberLength_)                                                  ===> _intNumberLength_ by default is total length, _intNumberStart_ can be with negative value
+[13] - include(_string_, _intNumberLength_)                                                         ===> _intNumberLength_ by default is total length
+[14] - startsWith(_string_, _intNumberStart_)                                                       ===> _intNumberStart_ by default is 0
+[15] - endsWith(_string_, _intNumberLength_)                                                        ===> _intNumberLength_ by default is total length
 # _builtinString__string_
-[1] - +                                                                             ===> to convert string to number
-[2] - -                                                                             ===> to convert string to number
+[1] - +                                                                                             ===> to convert string to number
+[2] - -                                                                                             ===> to convert string to number
 # _builtinString_
 [1] - Number(_string_)
 # _string__builtinString_
@@ -103,7 +107,7 @@ _elementID_                                                                     
 [3] - MAX_VALUE
 [4] - MIN_VALUE
 [5] - toString()
-[6] - toFixed(_intNumber_)                                                          ===> to string, not return `NaN`, round `10.65 => 10.7`
+[6] - toFixed(_intNumber_)                                                                          ===> to string, not return `NaN`, round `10.65 => 10.7`
 
 # _builtinNumber_
 [1] - pareseInt(_string_)
@@ -113,7 +117,7 @@ _elementID_                                                                     
 [5] - Math.round(_number_)
 [6] - Math.ceil(_number_)
 [7] - Math.floor(_number_)
-[8] - Math.trunc(_number_)                                                          ===> remove floating point
+[8] - Math.trunc(_number_)                                                                          ===> remove floating point
 [9] - Math.max(_number_, ...)
 [10] - Math.min(_number_, ...)
 [11] - Math.pow(_number_, _number_)
@@ -126,27 +130,27 @@ _elementID_                                                                     
 /*
 # _array_._builtinArray_
 [1] - length
-[2] - indexOf(_array_, _intNumberIndex_)                                            ===> _intNumberIndex_ by default is 0, if not found return -1
-[3] - lastIndexOf(_array_, _intNumberIndex_)                                        ===> _intNumberIndex_ by default is 0, if not found return -1
-[4] - slice(_intNumberStart_, _intNumberEnd_)                                       ===> by default _intNumberEnd_ is to end and not include _intNumberEnd_, _intNumberStart_ can be with negative value
+[2] - indexOf(_array_, _intNumberIndex_)                                                            ===> _intNumberIndex_ by default is 0, if not found return -1
+[3] - lastIndexOf(_array_, _intNumberIndex_)                                                        ===> _intNumberIndex_ by default is 0, if not found return -1
+[4] - slice(_intNumberStart_, _intNumberEnd_)                                                       ===> by default _intNumberEnd_ is to end and not include _intNumberEnd_, _intNumberStart_ can be with negative value
 [5] - splice(_intNumberStart_, _intNumberRemoved_, _dataAdded_, ...)
-[6] - unshift(_data_)                                                               ===> in the begain
+[6] - unshift(_data_)                                                                               ===> in the begain
 [7] - push(_data_)
-[8] - shift()                                                                       ===> to remove the first element
-[9] - pop()                                                                         ===> to remove the last element
-[10] - indexOf(_data_, _intNumberStart_)                                            ===> _intNumberStart_ by default is 0, if not found is -1
-[11] - lastIndexOf(_data_, _intNumberStart_)                                        ===> _intNumberStart_ by default is 0, _intNumberStart_ is negative, if not found is -1
-[12] - includes(_data_, _intNumberStart_)                                           ===> return 1, _intNumberStart_ by default is 0
+[8] - shift()                                                                                       ===> to remove the first element
+[9] - pop()                                                                                         ===> to remove the last element
+[10] - indexOf(_data_, _intNumberStart_)                                                            ===> _intNumberStart_ by default is 0, if not found is -1
+[11] - lastIndexOf(_data_, _intNumberStart_)                                                        ===> _intNumberStart_ by default is 0, _intNumberStart_ is negative, if not found is -1
+[12] - includes(_data_, _intNumberStart_)                                                           ===> return 1, _intNumberStart_ by default is 0
 [13] - sort()
 [14] - reverse()
 [15] - concat(_data_, ...)
-[16] - join(_stringSeparator_)                                                      ===> to string
+[16] - join(_stringSeparator_)                                                                      ===> to string
 
 # _higherOrderFunction_
-[1] - map((element, index, array) => _data_, _thisData_)                            ===> will get data as array, _thisData_ returned in function with `this`
-[2] - forEach((element, index, array) => _statement_, _thisData_)                   ===> will get data as array, _thisData_ returned in function with `this`, will not return data
-[2] - filter((element, index, array) => _boolean_, _thisData_)                      ===> will get data as array, _thisData_ returned in function with `this`, if _data_OR_Boolean_ equal to `false` will `continue`
-[3] - reduce((accumelator, current, index, array) => _data_, _initData_)            ===> to collect the `accumelator` and `current` and _initData_
+[1] - map((element, index, array) => _data_, _thisData_)                                            ===> will get data as array, _thisData_ returned in function with `this`
+[2] - forEach((element, index, array) => _statement_, _thisData_)                                   ===> will get data as array, _thisData_ returned in function with `this`, will not return data
+[2] - filter((element, index, array) => _boolean_, _thisData_)                                      ===> will get data as array, _thisData_ returned in function with `this`, if _data_OR_Boolean_ equal to `false` will `continue`
+[3] - reduce((accumelator, current, index, array) => _data_, _initData_)                            ===> to collect the `accumelator` and `current` and _initData_
 # _array__builtinArray_
 [1] - [_intNumber_]
 # _builtinArray_
@@ -155,12 +159,12 @@ _elementID_                                                                     
 */
 /*
 # _builtinObject_
-[1] - _object_._propertyName_                                                       ===> to access and edit
-[2] - _object_["_propertyName_"]                                                    ===> to access and edit
-[3] - new Object()                                                                  ===> to create new object
-[4] - Object.create(_object_)                                                       ===> to create new object, but showed in `_proto_` property
-[4] - Object.assign(_object_, ...)                                                  ===> to create new object, but showed in `_proto_` property
-[5] - this                                                                          ===> to access the parent object
+[1] - _object_._propertyName_                                                                       ===> to access and edit
+[2] - _object_["_propertyName_"]                                                                    ===> to access and edit
+[3] - new Object()                                                                                  ===> to create new object
+[4] - Object.create(_object_)                                                                       ===> to create new object, but showed in `_proto_` property
+[4] - Object.assign(_object_, ...)                                                                  ===> to create new object, but showed in `_proto_` property
+[5] - this                                                                                          ===> to access the parent object
 */
 /*
 # _proCondition_
@@ -180,7 +184,7 @@ _statementOperator_ ? _statement_ : _statementOperator_ ? _statement_ : ...;
 */
 /*
 # _switchCondition_
-switch (_expressionVar_) {                                                          ===> must be identical
+switch (_expressionVar_) {                                                                          ===> must be identical
     case _data_:
     ...
         _statement_;
@@ -190,7 +194,7 @@ switch (_expressionVar_) {                                                      
     default:
         _statement_;
         ...
-        break;                                                                      ===> put this if used in the first of switch condition
+        break;                                                                                      ===> put this if used in the first of switch condition
 }
 */
 /*
@@ -222,7 +226,7 @@ while (_statementOperator_) {
 }
 
 # _doWhileLoop_
-do {                                                                                ===> do the block of code before check condition
+do {                                                                                                ===> do the block of code before check condition
     _statement_;
     ...
     _statementAssignmentStep_;
@@ -271,7 +275,7 @@ document.write(_data_);
 window.console.log(_data_ + "%c_data_ ...", ..., _style_, ...);
 window.console.error(_data_);
 window.console.table([_data_, ...]);
-"use strict";                                                                       ===> not with block of code, not with function has default prameters
+"use strict";                                                                                       ===> not with block of code, not with function has default prameters
 */
 
 /*
@@ -286,19 +290,19 @@ document._elementObject_._attribute_
 [6] - title
 [7] - body
 [8] - forms
-[9] - _elementName_                                                                 ===> <input name="_elementName_"/>
+[9] - _elementName_                                                                                 ===> <input name="_elementName_"/>
 [10] - links
 [11] - styleSheets[_intIndex_].rules[_intIndex_].style._cssStyle_
 
 # _attribute_
-[1] - value                                                                         ===> input
-[2] - href                                                                          ===> a
+[1] - value                                                                                         ===> input
+[2] - href                                                                                          ===> a
 [3] - innerHTML
 [4] - textContent
 [5] - innerText
-[6] - src                                                                           ===> img
-[7] - alt                                                                           ===> img
-[8] - title                                                                         ===> img
+[6] - src                                                                                           ===> img
+[7] - alt                                                                                           ===> img
+[8] - title                                                                                         ===> img
 [9] - id
 [10] - className
 [11] - getAttribute("_attributeName_")
@@ -331,7 +335,7 @@ document._elementObject_._attribute_
 [38] - onsubmit = _function_
     [1] - function (event) {
         ...
-        event.preventDefault();                                                     ===> to prevent default action of the element as `a` will prevent go to link
+        event.preventDefault();                                                                     ===> to prevent default action of the element as `a` will prevent go to link
         event.clientX;
         event.clientY;
     }
@@ -350,22 +354,22 @@ document._elementObject_._attribute_
     [2] - cssText
     [3] - removeProperty("_propertyName_")
     [4] - setProperty("_propertyName_", "_value_", ...)
-[44] - before(_data_)                                                               ===> element
-[45] - after(_data_)                                                                ===> element
-[46] - append(_data_)                                                               ===> element
-[47] - prepend(_data_)                                                              ===> element
-[48] - remove()                                                                     ===> element
+[44] - before(_data_)                                                                               ===> element
+[45] - after(_data_)                                                                                ===> element
+[46] - append(_data_)                                                                               ===> element
+[47] - prepend(_data_)                                                                              ===> element
+[48] - remove()                                                                                     ===> element
 [49] - nextSibling
 [50] - nextElementSibling
 [51] - previousSibling
 [52] - previousElementSibling
 [53] - parentElement
 [54] - cloneNode(_boolWithAttribute_)
-[55] - addEventListener("_event_", _function_)                                      ===> can add more than one function, can created with undefined element, the bessssst
+[55] - addEventListener("_event_", _function_)                                                      ===> can add more than one function, can created with undefined element, the bessssst
     [1] - function (event) {
         ...
         event.target._attribute_;
-        event.preventDefault();                                                     ===> to prevent default action of the element as `a` will prevent go to link
+        event.preventDefault();                                                                     ===> to prevent default action of the element as `a` will prevent go to link
         event.clientX;
         event.clientY;
     }
@@ -376,35 +380,35 @@ window._browserObject_
 
 # _browserObject_
 [1] - alert(_data_)
-[2] - confirm(_data_)                                                               ===> yes or no, added to variable
-[3] - prompt(_data_, _data_)                                                        ===> to get data, added to variable, second _data_ is default input
-[4] - setTimeout(_function_, _intTimeMillisecond_, _arguments_, ...)                ===> if add function without ()
+[2] - confirm(_data_)                                                                               ===> yes or no, added to variable
+[3] - prompt(_data_, _data_)                                                                        ===> to get data, added to variable, second _data_ is default input
+[4] - setTimeout(_function_, _intTimeMillisecond_, _arguments_, ...)                                ===> if add function without ()
 [5] - clearTimeout(_settimeoutFunctionVar_)
-[4] - setInterval(_function_, _intTimeMillisecond_, _arguments_, ...)               ===> if add function without ()
+[4] - setInterval(_function_, _intTimeMillisecond_, _arguments_, ...)                               ===> if add function without ()
 [5] - clearInterval(_settimeoutFunctionVar_)
-[6] - location._parameter_                                                          ===> _parameter_ can be set with equalize
+[6] - location._parameter_                                                                          ===> _parameter_ can be set with equalize
     [1] - href
     [2] - host
     [3] - hostname
     [4] - protocol
     [5] - hash
     [6] - reload()
-    [7] - replace("_url_")                                                          ===> to edit history of visited websites
-    [8] - assign("_ur_")                                                            ===> to edit history of visited websites
+    [7] - replace("_url_")                                                                          ===> to edit history of visited websites
+    [8] - assign("_ur_")                                                                            ===> to edit history of visited websites
 [7] - close()
-[8] - open("_url_", "__target_", "_feature_")                                       ===> __target_ as _self and _blank, _feature_ as "width=_int_,height=_int_,top=_int_,bottom=_int_,right=_int_,left=_int_"
+[8] - open("_url_", "__target_", "_feature_")                                                       ===> __target_ as _self and _blank, _feature_ as "width=_int_,height=_int_,top=_int_,bottom=_int_,right=_int_,left=_int_"
 [9] - history._parameter_
     [1] - length
     [2] - back()
     [3] - forward()
-    [4] - go(_intStep_)                                                             ===> _intStep_ can be negative
+    [4] - go(_intStep_)                                                                             ===> _intStep_ can be negative
 [10] - stop()
 [11] - print()
 [12] - focus()
 [13] - scrollTo(_x_, _y_, "_behavior_")
-       scroll(_x_, _y_, "_behavior_")                                               ===> not supported
+       scroll(_x_, _y_, "_behavior_")                                                               ===> not supported
     [1] - smooth
-[14] - scrollBy(_x_, _y_)                                                           ===> to scroll after scroll
+[14] - scrollBy(_x_, _y_)                                                                           ===> to scroll after scroll
 [15] - pageXOffset
 [16] - pageYOffset
 [17] - scrollX
@@ -437,12 +441,12 @@ _canvasElement_.getContext("2d")._canvasStyleFuncton_;
       shadowBlur = _int_
       shadowOffsetX = _int_
       shadowOffsetY = _int_
-[3] - createPattern(_imageElement_, "_intRepeat_")                                  ===> in a variable
+[3] - createPattern(_imageElement_, "_intRepeat_")                                                  ===> in a variable
     [1] - repeat
     [2] - no-repeat
     [3] - repeat-x
     [4] - repeat-y
-[4] - scale(_x_, _y_)                                                               ===> and scale points
+[4] - scale(_x_, _y_)                                                                               ===> and scale points
 [5] - translate(_xAdded_, _yAdded_)
 [4] - fillRect(_x_, _y_, _w_, _h_)
       clearRect(_x_, _y_, _w_, _h_)
@@ -458,10 +462,10 @@ _canvasElement_.getContext("2d")._canvasStyleFuncton_;
 [9] - fillText("_string_", _x_, _y_)
 [10] - strokeText("_string_", _x_, _y_)
 [11] - beginPath()
-[12] - moveTo(_x_, _y_)                                                             ===> start
+[12] - moveTo(_x_, _y_)                                                                             ===> start
 [13] - lineTo(_x_, _y_)
        ...
-[14] - arc(_x_, _y_, _radius_, _startAngleRad_, _endAngleRad_, _boolAntiClockWise)  ===> 1 rad = Math.PI
+[14] - arc(_x_, _y_, _radius_, _startAngleRad_, _endAngleRad_, _boolAntiClockWise)                  ===> 1 rad = Math.PI
 [15] - closePath()
 [16] - stroke()
 [17] - fill()
