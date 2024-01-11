@@ -502,16 +502,59 @@ _canvasElement_.getContext("2d")._canvasStyleFuncton_;
 [19] - restore()
 */
 
-document.body
+/* regular expression (_re_)
+_re__reModifiers_...
 
-for (let i = 0; i < 10; i++) {
-    console.log(i + 1);
-}
+# _reModifiers_                                                                                     ===> can use more than 1
+[1] - i                                                                                             ===> insensitive
+[2] - g                                                                                             ===> global to return all data as array
+
+# _reFunction_
+[1] - _dataPattern_.match(_re_)                                                                     ===> to show index of one data found, `null` if not found
+[2] - _re_.test(_dataPattern_)                                                                      ===> true or false
+
+# _reSelector_
+[1] - (_data_)
+[2] - (_data_|...)                                                                                  ===> any type of data
+[3] - .                                                                                             ===> all except `\n`
+[4] - \w_reQuantifier_                                                                              ===> all characters (one character only)
+[5] - \W_reQuantifier_
+[6] - \d_reQuantifier_                                                                              ===> all intergers (digit)
+[7] - \D_reQuantifier_                                                                              ===> non-digit
+[8] - _character__reQuantifier_
+[9] - \s_reQuantifier_                                                                              ===> space
+[10] - \S_reQuantifier_                                                                             ===> non-space
+[11] - \b_word_                                                                                     ===> end or start with word
+[13] - \B_word_                                                                                     ===> not end or start with word
+[14] - \/
+[15] - _word_$                                                                                      ===> pattern end with string
+[16] - ^_word_                                                                                      ===> pattern start with string
+
+# _reQuantifier_
+[1] - +                                                                                             ===> one or more (character or digit)
+[2] - *                                                                                             ===> one or more or zero (character or digit)
+[3] - ?                                                                                             ===> one or zero (character or digit)
+[4] - _nothing_                                                                                     ===> one (character or digit)
+[5] - _reRange_
+[6] - {_int_,_int_OR_nothing_}
+
+# _reRange_
+[1] - [..._intStart_-_intEnd_]
+[2] - [^..._intStart_-_intEnd_]                                                                     ===> not within, `...` to add charaters as below
+[3] - [_characterStart_-_characterEnd_...]
+[4] - [^_characterStart_-_characterEnd_...]                                                         ===> can be capitalize
+[5] - [_character_...]
+[6] - [^_character_...]
+*/
 
 // http://es6-features.org/#Constants
 // https://leetcode.com/
 // https://babeljs.io/
 
+let data = "a@a.a hjfgk   bb@b.bb @hjvhbdk hbkj@@kjjvjkjd..hbgk hjgf@jjfdjk.jkhfk",
+    re = /\s+/ig;
+
+console.log(data.match(re));
 
 let canvas = Array.prototype.slice.call(document.getElementsByClassName("logo-cnvs")).map(e => e.getContext("2d")),
     circle = 2 * Math.PI;
