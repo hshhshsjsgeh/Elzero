@@ -296,15 +296,17 @@ _nameFunVar_(_argVar_: _argData_, ...);
 }
 */
 /*
-clear()
-typeof(_data_)
-typeof _data_
-window.alert(_data_);
-document.write(_data_);
-window.console.log(_data_ + "%c_data_ ...", ..., _style_, ...);
-window.console.error(_data_);
-window.console.table([_data_, ...]);
-"use strict";                                                                                       ===> not with block of code, not with function has default prameters
+[1] - clear()
+[2] - typeof(_data_)
+[3] - typeof _data_
+[4] - _varConstructorName_ instanceof _ConstructorName_                                             ===> to check
+      _varConstructorName_ === _ConstructorName_
+[5] - window.alert(_data_);
+[5] - document.write(_data_);
+[6] - window.console.log(_data_ + "%c_data_ ...", ..., _style_, ...);
+[7] - window.console.error(_data_);
+[8] - window.console.table([_data_, ...]);
+[9] - "use strict";                                                                                 ===> not with block of code, not with function has default prameters
 */
 
 /*
@@ -512,6 +514,8 @@ _re__reModifiers_...
 # _reFunction_
 [1] - _dataPattern_.match(_re_)                                                                     ===> to show index of one data found, `null` if not found
 [2] - _re_.test(_dataPattern_)                                                                      ===> true or false
+[3] - _dataPattern_.replace(_re_, _data_)
+[4] - _dataPattern_.replaceAll(_re_, _data_)
 
 # _reSelector_
 [1] - (_data_)
@@ -527,8 +531,11 @@ _re__reModifiers_...
 [11] - \b_word_                                                                                     ===> end or start with word
 [13] - \B_word_                                                                                     ===> not end or start with word
 [14] - \/
-[15] - _word_$                                                                                      ===> pattern end with string
-[16] - ^_word_                                                                                      ===> pattern start with string
+[15] - \.
+[16] - _data_$                                                                                      ===> pattern end with string
+[17] - ^_data_                                                                                      ===> pattern start with string
+[18] - ?=_data_                                                                                     ===> end with data
+[19] - ?!_data_                                                                                     ===> not end with data
 
 # _reQuantifier_
 [1] - +                                                                                             ===> one or more (character or digit)
@@ -536,7 +543,8 @@ _re__reModifiers_...
 [3] - ?                                                                                             ===> one or zero (character or digit)
 [4] - _nothing_                                                                                     ===> one (character or digit)
 [5] - _reRange_
-[6] - {_int_,_int_OR_nothing_}
+[6] - {_intStart_,_intEnd_OR_nothing_}                                                              ===> to show data with specific length
+[7] - {_intLength_}
 
 # _reRange_
 [1] - [..._intStart_-_intEnd_]
@@ -547,9 +555,31 @@ _re__reModifiers_...
 [6] - [^_character_...]
 */
 
+/* OOP
+function _ConstructorName_(_argName_ = _argValue_, ..., ..._argNameArray_) {
+    this._varPropertyNameNew_ = _data_;
+    ...
+    _functionMethod_;
+    ...
+};
+class _ConstructorName_ extends _inheritedConstructorName_ {                                        ===> ES6
+    static _property_OR_Method_;                                                                    ===> to accessed only inside this class, _method_ without `function keyword`
+    constructor(_argName_ = _argValue_, ..., ..._argNameArray_) {
+        this._varPropertyNameNew_ = _data_;
+        ...
+        super(_varPropertyName_, ...);                                                              ===> to access data from _inheritedConstructorName_
+    };
+    _functionMethod_;
+};
+
+_var_ = new _ConstructorName_(_argVar_: _argData_, ...);
+_var_._argVar_;
+*/
+
 // http://es6-features.org/#Constants
 // https://leetcode.com/
 // https://babeljs.io/
+// https://regexr.com/
 
 let data = "a@a.a hjfgk   bb@b.bb @hjvhbdk hbkj@@kjjvjkjd..hbgk hjgf@jjfdjk.jkhfk",
     re = /\s+/ig;
