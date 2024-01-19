@@ -1,0 +1,10 @@
+{
+    "string": "string",
+    "number": 1152,
+    "object": {
+        "data": "data"
+    },
+    "array": [1,2,3,"5"],
+    "bool": true,
+    "null": null
+}
