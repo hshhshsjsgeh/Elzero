@@ -247,6 +247,13 @@ _forLoopName_: for (;;) {
     _sequenceControl_;
 };
 
+# _objectForLoop_
+for (let i of _enumrable_) {                                                                         ===> as _generatorFunction_
+    _statement_;
+    ...
+    _sequenceControl_;
+};
+
 # _standardWhileLoop_
 while (_statementOperator_) {
     _statement_;
@@ -295,6 +302,20 @@ _nameFunVar_(_argVar_: _argData_, ...);
     ...
     return _data_;
 }
+
+# _generatorFunction_
+function* _funcName_(_argName_ = _argValue_, ..., ..._argNameArray_) {
+    _statement_;
+    ...
+    yield _data_OR_This_;
+    ...
+    yield* _enumrable_;
+    ...
+};
+_funcName_.next()._function_;
+[1] - value
+[2] - done
+_funcName_.return()                                                                                 ===> to stop generator function
 */
 /*
 [1] - clear()
@@ -608,7 +629,32 @@ Object.getOwnPropertyDesciptor(_objectName_, "_propertyName_");
 Object.getOwnPropertyDesciptors(_objectName_);
 */
 /* OOP (Date)
+_var_ = new Date(_date_OR_Nothing_);
+_var_._function_
+[1] - getTime()                                                                                     ===> in miliseconds (1 ms = 1000 s)
+[2] - getDate()                                                                                     ===> in day of the month starts from 0
+[3] - getFullYear()
+[4] - getMonth()                                                                                    ===> month of year starts from 0
+[5] - getDay()                                                                                      ===> day of week starts from 0
+[6] - setTime(_intMiliseconds_)
+[7] - setDate(_intDayOfMonth_)
+[8] - setFullYear(_intYear_, _intMonthOfYear_)
+[9] - setMonth(_monthOfYear_, _dayOfMonth_)
+[10] - setDay(_dayOfWeek_)
 
+Date._function_
+[1] - now()                                                                                         ===> in miliseconds (1 ms = 1000 s)
+[2] - parse("_stringDate_")
+*/
+
+/* modules
+export _statement_;
+export {_statementName_ as _newName_, ...};
+export default _statement_;                                                                         ===> to imported alone
+*/
+/*
+import _defaultStatementName_, {_statementName_ as _newName_, ...} from "_path_";
+import * as _newName_ from "_path_";
 */
 
 // http://es6-features.org/#Constants
