@@ -657,6 +657,12 @@ import _defaultStatementName_, {_statementName_ as _newName_, ...} from "_path_"
 import * as _newName_ from "_path_";
 */
 
+/* json
+JSON._function_
+[1] - parse("_string_")
+[2] - stringify(_json_)
+*/
+
 // http://es6-features.org/#Constants
 // https://leetcode.com/
 // https://babeljs.io/
