@@ -647,6 +647,16 @@ Date._function_
 [2] - parse("_stringDate_")
 */
 
+/* OOP (promise)
+_var_ = new Promise(funcion (resolvedFunction, rejectedFunction) {                                  ===> to check connection
+    resolvedFunction(_data_);                                                                       ===> can be inside condition
+    rejectedFunction(Error(_data_));
+}).then(
+    resolveValue;
+    rejectValue;
+);
+*/
+
 /* modules
 export _statement_;
 export {_statementName_ as _newName_, ...};
