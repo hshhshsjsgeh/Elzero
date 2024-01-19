@@ -228,6 +228,19 @@ switch (_expressionVar_) {                                                      
 }
 */
 /*
+# _tryCondition_
+try {
+    _statement_;
+    ...
+} catch (_errorVar_) {
+    _statement_;
+    ...
+} finally {
+    _statement_;
+    ...
+}
+*/
+/*
 # _standardForLoop_
 _forLoopName_: for (_varInit_; _statementOperator_; _statementAssignmentStep_) {
     _statement_;
@@ -275,7 +288,8 @@ do {                                                                            
 [2] - continue
 [3] - break _forLoopName_
 [4] - continue _forLoopName_
-[5] - _nothing_
+[5] - throw new Error(_data_)
+[6] - _nothing_
 */
 /*
 # _statndardFunction_
@@ -316,6 +330,18 @@ _funcName_.next()._function_;
 [1] - value
 [2] - done
 _funcName_.return()                                                                                 ===> to stop generator function
+
+# _asyncFunction_
+async _funcName_(_argName_ = _argValue_, ..., ..._argNameArray_) {
+    _statement_;
+    ...
+    await _promise_;
+    return _data_OR_This_;
+};
+_funcName_(_argVar_: _argData_, ...)._promiseFunction_....;
+[1] - then(_resolverVar_ => _statement_, _rejectorVar_ => _statement_)
+[2] - catch(_rejectorVar_ => _statement_)
+[3] - finally(_statement_);
 */
 /*
 [1] - clear()
@@ -648,13 +674,27 @@ Date._function_
 */
 
 /* OOP (promise)
-_var_ = new Promise(funcion (resolvedFunction, rejectedFunction) {                                  ===> to check connection
-    resolvedFunction(_data_);                                                                       ===> can be inside condition
-    rejectedFunction(Error(_data_));
-}).then(
-    resolveValue;
-    rejectValue;
-);
+_varPromise_ = new Promise(function (_resolverFunctionName_, _rejectorFunctionName_) {              ===> to prevent call back hell
+    if (_boolTrue_) {
+        _resolverFunctionName_(_data_);
+    } esle {
+        _rejectorFunctionName_(_data_OR_Error_);
+    };
+});
+_varPromiseAll_ = new Promise.all([_varPromise_, ...]);
+_varPromiseAllSettled_ = new Promise.allSettled([_varPromise_, ...]);
+_varPromiseRace_ = new Promise.race([_varPromise_, ...]);                                           ===> in _async_
+
+_varPromiseFetch_ = fetch("_url_");                                                                 ===> but hadn't _rejectorVar_
+
+_varPromise_._promiseFunction_....;
+[1] - then(_resolverVar_ => _statement_, _rejectorVar_ => _statement_)
+[2] - catch(_rejectorVar_ => _statement_)
+[3] - finally(_statement_)
+[4] - resolve(_data_)
+
+# _error_
+[1] - Error(_data_)
 */
 
 /* modules
