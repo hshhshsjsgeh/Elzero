@@ -435,9 +435,9 @@ window._browserObject_
 [1] - alert(_data_)
 [2] - confirm(_data_)                                                                               ===> yes or no, added to variable
 [3] - prompt(_data_, _data_)                                                                        ===> to get data, added to variable, second _data_ is default input
-[4] - setTimeout(_function_, _intTimeMillisecond_, _arguments_, ...)                                ===> if add function without ()
+[4] - setTimeout(_function_, _intTimeMillisecond_, _arguments_, ...)                                ===> if add function without (), _async_
 [5] - clearTimeout(_settimeoutFunctionVar_)
-[4] - setInterval(_function_, _intTimeMillisecond_, _arguments_, ...)                               ===> if add function without ()
+[4] - setInterval(_function_, _intTimeMillisecond_, _arguments_, ...)                               ===> if add function without (), _async_
 [5] - clearInterval(_settimeoutFunctionVar_)
 [6] - location._parameter_                                                                          ===> _parameter_ can be set with equalize
     [1] - href
@@ -663,10 +663,27 @@ JSON._function_
 [2] - stringify(_json_)
 */
 
+/* ajax
+_var_ = new XMLHttpRequest();
+_var_._function_;
+[1] - open(_stringMethod_, _stringUrl_, _boolAsync_)                                                ===> can be json file
+[2] - send()                                                                                        ===> to send the request
+[3] - onreadystatechange = _function_
+[4] - readyState
+[5] - status
+[6] - response
+
+
+CORS
+API Authentication
+*/
+
 // http://es6-features.org/#Constants
 // https://leetcode.com/
 // https://babeljs.io/
 // https://regexr.com/
+
+let n = new XMLHttpRequest();
 
 class User {
     #p;
