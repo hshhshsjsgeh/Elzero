@@ -62,6 +62,7 @@ _data_ _nullishCoalescingOperator_ _data_                                       
 # _event_
 [1] - contextmenu
 [2] - click
+[3] - DOMContentLoaded
 */
 /*
 _keywordVar_ _nameVar_ = _dataValue_
@@ -120,8 +121,8 @@ _elementID_                                                                     
 [6] - toFixed(_intNumber_)                                                                          ===> to string, not return `NaN`, round `10.65 => 10.7`
 
 # _builtinNumber_
-[1] - pareseInt(_string_)
-[2] - pareseFloat(_string_)
+[1] - parseInt(_string_)
+[2] - parseFloat(_string_)
 [3] - Number.isInteger(_data_)
 [4] - Number.isNaN(_data_)
 [5] - Math.round(_number_)
@@ -563,17 +564,51 @@ function _ConstructorName_(_argName_ = _argValue_, ..., ..._argNameArray_) {
     ...
 };
 class _ConstructorName_ extends _inheritedConstructorName_ {                                        ===> ES6
-    static _property_OR_Method_;                                                                    ===> to accessed only inside this class, _method_ without `function keyword`
+    static _property_;                                                                              ===> to accessed only inside this class
+    ...
+    #_varPropertyNameNew_OR_varMethodNameNew_
+    ...
     constructor(_argName_ = _argValue_, ..., ..._argNameArray_) {
-        this._varPropertyNameNew_ = _data_;
+        this._varPropertyNameNew_ = _argVar_;
+        this.#_varPropertyNameNew_ = _argVar_;                                                      ===> private encapsulated argument can't be accessed outside class
         ...
         super(_varPropertyName_, ...);                                                              ===> to access data from _inheritedConstructorName_
     };
-    _functionMethod_;
+    static_OR_Nothing_ _functionMethod_;                                                            ===> without `function` keyword
+    ...
+    static_OR_Nothing_ #_functionMethod_;
+    ...
 };
 
 _var_ = new _ConstructorName_(_argVar_: _argData_, ...);
 _var_._argVar_;
+
+_ConstructorName_._argVar_;
+
+# _argVar_
+[1] - prototype
+[2] - prototype._property_OR_Method_                                                                ===> to add method or property as chain
+
+Object.defineProperty(_objectName_, "_propertyName_", {
+    writeable: _bool_,                                                                              ===> can set value
+    enumerable: _bool_,                                                                             ===> can in loop
+    configrable: _bool_,                                                                            ===> can edited
+    value: _data_,
+});
+Object.defineProperties(_objectName_, {
+    _propertyName_: {
+        writeable: _bool_,                                                                          ===> can set value
+        enumerable: _bool_,                                                                         ===> can in loop
+        configrable: _bool_,                                                                        ===> can edited
+        value: _data_,
+    },
+    ...
+});
+Object.getOwnPropertyDesciptor(_objectName_, "_propertyName_");
+Object.getOwnPropertyDesciptors(_objectName_);
+*/
+/* OOP (Date)
+
 */
 
 // http://es6-features.org/#Constants
@@ -581,10 +616,22 @@ _var_._argVar_;
 // https://babeljs.io/
 // https://regexr.com/
 
-let data = "a@a.a hjfgk   bb@b.bb @hjvhbdk hbkj@@kjjvjkjd..hbgk hjgf@jjfdjk.jkhfk",
-    re = /\s+/ig;
+class User {
+    #p;
+    constructor(id, name, password) {
+        this.d = id;
+        this.n = name;
+        this.#p = password;
+    };
+};
 
-console.log(data.match(re));
+class Admin extends User {
+    #f
+    constructor(id, name, password, permission) {
+        super(id, name, password);
+        this.r = permission;
+    };
+};
 
 let canvas = Array.prototype.slice.call(document.getElementsByClassName("logo-cnvs")).map(e => e.getContext("2d")),
     circle = 2 * Math.PI;
