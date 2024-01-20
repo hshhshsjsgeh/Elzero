@@ -230,7 +230,7 @@ if __name__ == '__main__':
 #             template_name   = '_htmlPath_'
 #             template_engine = _engineType_
 #             response_class  = _response_
-#             conten_type     = 'text/html'
+#             content_type     = 'text/html'
 #             def get_context_data(self, ...):
 #                 _statement_
 #         [2] - DetailView
@@ -267,6 +267,7 @@ if __name__ == '__main__':
 # -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # | index.html |
 # --------------
+# {% extends '_path_.html' %}
 # {% load static %}
 #
 # {% block _blockName_ %}
@@ -280,6 +281,8 @@ if __name__ == '__main__':
 #     {{ forloop.counter }}
 #     {{ choice.votes|pluralize }}
 # {% endfor %}
+#
+# {{ _data_|_function_ }}
 #
 # {{ _contextVar_ }}
 #
