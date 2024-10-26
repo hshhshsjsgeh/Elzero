@@ -289,7 +289,7 @@ do {                                                                            
 [3] - break _forLoopName_
 [4] - continue _forLoopName_
 [5] - throw new Error(_data_)
-[6] - assert _statementOperator_
+[6] - assert(_statementOperator_)
 [7] - _nothing_
 */
 /*
