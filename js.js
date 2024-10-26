@@ -695,6 +695,8 @@ _varPromise_._promiseFunction_....;
 
 # _error_
 [1] - Error(_data_)
+[2] - TypeError(_data_)
+# _error_._errorAttribute_
 */
 
 /* modules
