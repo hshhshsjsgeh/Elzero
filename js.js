@@ -289,7 +289,8 @@ do {                                                                            
 [3] - break _forLoopName_
 [4] - continue _forLoopName_
 [5] - throw new Error(_data_)
-[6] - _nothing_
+[6] - assert _statementOperator_
+[7] - _nothing_
 */
 /*
 # _statndardFunction_
@@ -696,6 +697,7 @@ _varPromise_._promiseFunction_....;
 # _error_
 [1] - Error(_data_)
 [2] - TypeError(_data_)
+[3] - AssertionError
 # _error_._errorAttribute_
 */
 
