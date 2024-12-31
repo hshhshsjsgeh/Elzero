@@ -721,10 +721,12 @@ JSON._function_
 _var_ = new XMLHttpRequest();
 _var_._function_;
 [1] - open(_stringMethod_, _stringUrl_, _boolAsync_)                                                ===> can be json file
-[2] - send()                                                                                        ===> to send the request
+[3] - setRequestHeader(_stringHeader_, _stringValue_)
+[2] - send(_stringUrlParameters_)                                                                                        ===> to send the request
 [3] - onreadystatechange = _function_
 [4] - readyState
 [5] - status
+[6] - statusText
 [6] - response
 
 
