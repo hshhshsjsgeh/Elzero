@@ -701,6 +701,13 @@ _varPromise_._promiseFunction_....;
 # _error_._errorAttribute_
 */
 
+/* OOP (Buffer: binary data)
+let buffer = Buffer(_length_);
+
+[1] - buffer.length
+[2] - buffer.write("_data_")
+*/
+
 /* modules
 export _statement_;
 export {_statementName_ as _newName_, ...};
