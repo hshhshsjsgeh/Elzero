@@ -87,6 +87,10 @@ _elementID_                                                                     
 `_data_ ${_nameVar_} ...`                                                                           ===> _templateLitral_
 */
 /*
+_builtin_
+process.argv
+*/
+/*
 # _string_._builtinString_
 [1] - repeat(_intNumber_)
 [2] - charAt(_intNumber_)
