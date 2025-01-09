@@ -89,6 +89,7 @@ _elementID_                                                                     
 /*
 _builtin_
 process.argv
+await sleep(_int_)
 */
 /*
 # _string_._builtinString_
