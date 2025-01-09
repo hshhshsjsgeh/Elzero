@@ -358,7 +358,7 @@ _funcName_(_argVar_: _argData_, ...)._promiseFunction_....;
 [5] - window.alert(_data_);
 [5] - document.write(_data_);
 [6] - window.console.log(_data_ + "%c_data_ ...", ..., _style_, ...);
-      window.console.log("\x1b[35m%s\x1b[0m", "_data_");
+      window.console.log("\x1b[_7int_m%s\x1b[_7int_m", "_data_");
 [7] - window.console.error(_data_);
 [8] - window.console.table([_data_, ...]);
 [9] - "use strict";                                                                                 ===> not with block of code, not with function has default prameters
