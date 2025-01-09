@@ -470,6 +470,7 @@ window._browserObject_
 [3] - prompt(_data_, _data_)                                                                        ===> to get data, added to variable, second _data_ is default input
 [4] - setTimeout(_function_, _intTimeMillisecond_, _arguments_, ...)                                ===> if add function without (), _async_
 [5] - clearTimeout(_settimeoutFunctionVar_)
+[6] - setInterval(_function_, _arguments_, ...)
 [4] - setInterval(_function_, _intTimeMillisecond_, _arguments_, ...)                               ===> if add function without (), _async_
 [5] - clearInterval(_settimeoutFunctionVar_)
 [6] - location._parameter_                                                                          ===> _parameter_ can be set with equalize
@@ -683,9 +684,9 @@ Date._function_
 /* OOP (promise)
 _varPromise_ = new Promise(function (_resolverFunctionName_, _rejectorFunctionName_) {              ===> to prevent call back hell
     if (_boolTrue_) {
-        _resolverFunctionName_(_data_);
+        _resolverFunctionName_(_data_);                                                             ===> returned data
     } esle {
-        _rejectorFunctionName_(_data_OR_Error_);
+        _rejectorFunctionName_(_data_OR_Error_);                                                    ===> returned data
     };
 });
 _varPromiseAll_ = new Promise.all([_varPromise_, ...]);
