@@ -90,6 +90,8 @@ _elementID_                                                                     
 _builtin_
 process.argv
 await sleep(_int_)
+__dirname
+__filename
 */
 /*
 # _string_._builtinString_
@@ -713,6 +715,21 @@ let buffer = Buffer(_length_);
 
 [1] - buffer.length
 [2] - buffer.write("_data_")
+*/
+
+/* OOP (TextEncoder)
+_varEncoder_ = new TextEncoder();
+[1] - _varEncoder_.encode("_data_");
+*/
+
+/* OOP (TextDecoder)
+_varDecoder_ = new TextDecoder();
+[1] - _varDecoder_.decode(_TextEncoder_);
+*/
+
+/* OOP (URL)
+_varURL_ = new URL();
+[1] - _varURL_._property_;
 */
 
 /* modules
