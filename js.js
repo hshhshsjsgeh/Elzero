@@ -711,10 +711,15 @@ _varPromise_._promiseFunction_....;
 */
 
 /* OOP (Buffer: binary data)
-let buffer = Buffer(_length_);
+let buffer = new Buffer(_lengthORData_);
 
-[1] - buffer.length
-[2] - buffer.write("_data_")
+[1] - buffer.length;
+[2] - buffer.write("_data_");
+[3] - buffer.include('_data_', _intStart_);
+[4] - Buffer.from('_dataSource_').compare(Buffer.from('_dataTarget_'), _intStartTarget_, _intEndTarget_, _intStartSource_, _intEndSource_);
+[4] - Buffer.compare(Buffer.from('_dataTarget_'), from('_dataSource_'));
+[3] - Buffer.from('_dataSource_')._func_
+    [1] - copy(Buffer.from('_dataTarget_'), _intStartTarget_, _intStartSource_, _intEndSource_);
 */
 
 /* OOP (TextEncoder)
@@ -763,6 +768,10 @@ _var_._function_;
 
 CORS
 API Authentication
+*/
+/*
+to be continue
+https://www.geeksforgeeks.org/node-js-buffer-complete-reference/
 */
 
 // http://es6-features.org/#Constants
